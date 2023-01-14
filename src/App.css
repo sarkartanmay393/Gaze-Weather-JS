@@ -1,38 +1,75 @@
-.App {
+body {
+  background: whitesmoke;
+  min-width: 400px;
+}
+
+.app {
+  padding: 0.1rem 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  margin: 12px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h2 {
+  text-transform: capitalize;
+  color: darkorange;
+  font-size: 2rem;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+
+  outline: solid 1px black;
+  border-radius: 6px;
+
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.489);
+  padding-bottom: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.nav-div {
+  display: grid;
+
+  background: rgba(254, 177, 237, 0.73);
+
+  max-height: max-content;
+  max-width: max-content;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-div button {
+  margin: 0.6rem;
+
+  box-sizing: content-box;
+  padding: 0rem;
+  border: 1px solid black;
+
+  height: 3.2rem;
+  width: 3.2rem;
+
+  border-radius: 8px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 20px 20px 60px #9b9b9b,
+    -20px -20px 60px #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-div button img {
+  padding: 0.8rem;
+}
+
+.main-div {
+  margin: 0 auto;
+  width: min-content;
+}
+
+.footer {
+  display: grid;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+
+}
+
+.footer img {
+  height: 2rem;
+  margin: 0 auto;
 }

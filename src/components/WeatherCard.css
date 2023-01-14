@@ -1,0 +1,221 @@
+.weather {
+    display: flex;
+    text-align: center;
+}
+
+.weather-card {
+    margin: 5rem;
+    border: 0.1px solid rgba(0, 0, 0, 0.625);
+
+    height: 24rem;
+    width: 18rem;
+
+    border-radius: 10px;
+    box-shadow: -2px 2px 6px 0px black, inset -4px 4px 100px 0px black, 0px -2px 2px 0px rgba(0, 0, 0, 0.419);
+}
+
+.weather-bg {
+    border: 0px solid darkcyan;
+    border-radius: 10px;
+
+
+    height: 24rem;
+    width: 18rem;
+
+    background-image: url('https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1219/Suspension%20Bridge%20to%20Sikkim.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(4px);
+    -webkit-filter: blur(3px);
+}
+
+.bottom-white-space {
+    position: relative;
+    bottom: 10.8rem;
+
+    border-radius: 0px 0px 10px 10px;
+
+
+    height: 6.5rem;
+    width: 18rem;
+
+    color: black;
+    font-family: Helvetica;
+
+    background-color: lightblue;
+}
+
+.white-space-inside {
+    background-image: url('../assets/sunny-bg.svg');
+    background-size: 5.5rem;
+    background-position: 12em;
+    background-repeat: no-repeat;
+
+    border-radius: 0px 0px 10px 10px;
+
+
+    box-shadow: -2px -2px 2px -2px black inset;
+}
+
+.white-space-inside img {
+    height: 3rem;
+
+    margin-left: 4px;
+}
+
+.white-space-inside .col {
+    display: grid;
+    justify-content: start;
+
+    position: relative;
+    bottom: -1rem;
+    left: 1rem;
+}
+
+.white-space-inside #degree-meter {
+    font-size: 2rem;
+    font-family: 'Space Grotesk', sans-serif;
+
+    text-align: center;
+    position: relative;
+    bottom: 2rem;
+    left: -3px;
+}
+
+.weather-inside {
+    position: relative;
+    bottom: 22rem;
+
+    border: 0px solid black;
+    color: white;
+    width: max-content;
+
+    margin-left: 1.2rem;
+}
+
+.weather-inside .row {
+    display: flex;
+    padding: 3px 1px;
+
+    margin: 3px 0px;
+    justify-content: center;
+
+    color: black;
+    background-color: white;
+}
+
+.weather-inside .row img {
+    padding: 0;
+    height: 2vh;
+    background-color: white;
+}
+
+.weather-inside .row p {
+    font-size: 0.8rem;
+}
+
+.weather-info {
+    border: 0.1px solid rgba(0, 0, 0, 0.625);
+    border-left-style: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 1rem;
+
+    position: relative;
+    top: 6.15rem;
+    right: 4.98rem;
+
+    width: 16rem;
+    height: 20rem;
+
+    background-color: white;
+
+    box-shadow: 0px 1px 2px 0.2px rgba(0, 0, 0, 0.576);
+}
+
+.weather-info .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sun-time-div {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0.7rem 0.2rem;
+}
+
+.sun-time-div img {
+    height: 5rem;
+    text-align: start;
+}
+
+.sun-time-div .col {
+    text-align: end;
+    position: relative;
+    top: 1.2rem;
+}
+
+
+.weather-timeline {
+    margin-top: 1rem;
+
+    background: lightgreen;
+    border-radius: 6px;
+    text-align: center;
+    height: 4.6rem;
+    padding: 2px;
+
+    background-color: lightblue;
+}
+
+.weather-timeline .col {
+    text-align: center;
+    padding: 4px;
+}
+
+.weather-timeline .col:hover {
+    border: 1px solid black;
+    border-radius: 6px;
+    background: lightseagreen;
+}
+
+.weather-timeline .col img {
+    height: 2rem;
+}
+
+.weather-timeline .col p {
+    font-size: 0.8rem;
+}
+
+
+
+#location-btn {
+    border: 0px;
+    background: transparent;
+    font-family: monospace;
+    width: 14rem;
+    height: 2rem;
+
+}
+
+.btn-area {
+    margin: 0 auto;
+    margin-top: 2rem;
+    background-color: lightsalmon;
+    border-radius: 8px;
+    width: 14rem;
+    height: 2rem;
+    font-family: monospace;
+    border: 0.1px solid black;
+}
+
+#text-area {
+    height: 2rem;
+    width: 14rem;
+    border-radius: 8px;
+    border: 0px;
+    text-indent: 1rem; 
+}
