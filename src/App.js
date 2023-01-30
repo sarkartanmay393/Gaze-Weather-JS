@@ -1,5 +1,6 @@
 import './App.css';
 import WeatherCard from './components/WeatherCard';
+import React from 'react';
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
       </div>
       <footer>
         <div id="footer" className='footer'>
-          <img onClick={referToGithub} src={require('./assets/profile.svg').default} alt="github-link" />
+          <img onClick={referToGithub} src={require('./assets/profile.svg')} alt="github-link" />
           <p onClick={referToGithub}>Github</p>
         </div>
       </footer>

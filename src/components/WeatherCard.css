@@ -1,3 +1,8 @@
+#update-time {
+    font-size: 0.7rem;
+    font-family: monospace;
+}
+
 .weather {
     display: flex;
     text-align: center;
@@ -38,7 +43,7 @@
     border-radius: 0px 0px 10px 10px;
 
 
-    height: 6.5rem;
+    height: 6.1rem;
     width: 18rem;
 
     color: black;
@@ -48,40 +53,70 @@
 }
 
 .white-space-inside {
-    background-image: url('../assets/sunny-bg.svg');
-    background-size: 5.5rem;
-    background-position: 12em;
-    background-repeat: no-repeat;
-
     border-radius: 0px 0px 10px 10px;
 
+    position: relative;
+    justify-content: center;
 
-    box-shadow: -2px -2px 2px -2px black inset;
-}
-
-.white-space-inside img {
-    height: 3rem;
-
-    margin-left: 4px;
 }
 
 .white-space-inside .col {
+    display: flex;
+    justify-content: start;
+    width: 50%;
+    align-items: center;
+
+    position: relative;
+    left: 1rem;
+    top: 1.5rem;
+
+    padding-top: 0.2rem;
+}
+
+.white-space-inside .col h3 {
+    text-transform: capitalize;
+    width: min-content;
+    text-align: center;
+    font-family: 'Helvetica Neue';
+
+}
+
+.white-space-inside .col img {
+    height: 6vh;
+    margin-right: 12px;
+}
+
+.white-space-inside .right {
     display: grid;
     justify-content: start;
 
-    position: relative;
-    bottom: -1rem;
-    left: 1rem;
+    width: 50%;
+    height: 5.5rem;
+    position: absolute;
+
+    right: -17%;
+    top: 1%;
 }
 
+.white-space-inside .right img {
+    margin-top: -2px;
+    height: 4.5rem;
+}
+
+.white-space-inside .right h3 {
+    position: absolute;
+    left: -4%;
+}
+
+
 .white-space-inside #degree-meter {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-family: 'Space Grotesk', sans-serif;
 
     text-align: center;
-    position: relative;
-    bottom: 2rem;
-    left: -3px;
+    position: absolute;
+    bottom: 0rem;
+    right: 42%;
 }
 
 .weather-inside {
@@ -113,7 +148,19 @@
 }
 
 .weather-inside .row p {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.weather-inside h3 {
+    letter-spacing: 2px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+    color: lightgoldenrodyellow;
+    border: 2px solid white;
+    padding: 1px 8px;
 }
 
 .weather-info {
@@ -215,7 +262,23 @@
 #text-area {
     height: 2rem;
     width: 14rem;
-    border-radius: 8px;
+    border-radius: 8px 0 0 8px;
     border: 0px;
-    text-indent: 1rem; 
+    text-indent: 1rem;
+}
+
+.error {
+    border: 2px double red;
+}
+
+.error::placeholder {
+    color: red;
+    font-weight: bold;
+}
+
+#search-btn {
+    background-color: white;
+    border: 0;
+    border-radius: 0 8px 8px 0;
+    padding: 6px;
 }
