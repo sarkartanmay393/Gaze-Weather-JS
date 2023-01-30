@@ -10,11 +10,6 @@ function App() {
     }
   };
 
-  const referToGithub = () => {
-    window.open("https://github.com/sarkartanmay393");
-  }
-
-
   return (
     <div className="app">
       <header className="header">
@@ -25,8 +20,9 @@ function App() {
       </div>
       <footer>
         <div id="footer" className='footer'>
-          <img onClick={referToGithub} src={require('./assets/profile.svg')} alt="github-link" />
-          <p onClick={referToGithub}>Github</p>
+          <a href='https://github.com/sarkartanmay393'><img src={require('./assets/profile.svg').default} alt="github-link" />
+            <p>Github</p>
+          </a>
         </div>
       </footer>
 
