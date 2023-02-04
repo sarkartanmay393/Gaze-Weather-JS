@@ -31,6 +31,7 @@ function WeatherCard() {
             "Rise": "06:20",
             "Set": "05:15"
         },
+        "DayName": "Sunday",
         "Day1": {},
         "Day2": {},
         "Day3": {},
@@ -65,15 +66,15 @@ function WeatherCard() {
         let locationBody = locationRes.data ? locationRes.data[0] : {};
         if (!locationBody) {
             // text-area styling on error
-            document.getElementById('text-area').className += "error";
+            (document.getElementById('text-area') as HTMLElement).className += "error";
 
             // more additions
             setTextValue('');
-            document.getElementById('text-area').placeholder = "Location not found!";
+            (document.getElementById('text-area') as HTMLElement).ariaPlaceholder = "Location not found!";
 
             window.setTimeout(() => {
-                document.getElementById('text-area').placeholder = "Type another location..."
-                document.getElementById('text-area').className = "";
+                (document.getElementById('text-area') as HTMLElement).ariaPlaceholder = "Type another location...";
+                (document.getElementById('text-area') as HTMLElement).className = "";
             }, 2000);
 
             return;
@@ -129,7 +130,7 @@ function WeatherCard() {
         setTextValue('');
     }
 
-    const sw = (DayNum) => {
+    const sw = (DayNum: number): string => {
         switch (DayNum) {
             default:
                 return "";
@@ -156,7 +157,8 @@ function WeatherCard() {
         setDatetime({
             "DATE": `${pageInfo['Time'].slice(8, 10)}-${pageInfo['Time'].slice(5, 7)}-${pageInfo['Time'].slice(0, 4)}`,
             "TIME": `${timeMeter === "PM" ?
-                ((+pageInfo['Time'].slice(11, 13) - 12 + "").length === 1 ? "0" + (+pageInfo['Time'].slice(11, 13) - 12 + "") : +pageInfo['Time'].slice(11, 13) - 12)
+                ((+pageInfo['Time'].slice(11, 13) - 12 + "").length === 1 ? "0" + (+pageInfo['Time'].slice(11, 13) - 12 + "") :
+                    +pageInfo['Time'].slice(11, 13) - 12)
                 : pageInfo['Time'].slice(11, 13)}:${pageInfo['Time'].slice(14, 16)
                 } ${timeMeter}`,
         });
@@ -241,11 +243,17 @@ function WeatherCard() {
                     <div className='btn-area'>
                         {openSearchBox ?
                             <div className='row'>
-                                <input id='text-area' style={{}} name='search-for' type="text" placeholder='e.g. Delhi' value={textValue} onChange={e => setTextValue(e.target.value)} onKeyDown={(e) => {
-                                    if (e.key === "Enter") {
-                                        searchButton();
-                                    }
-                                }} />
+                                <input id='text-area'
+                                    style={{}} name='search-for'
+                                    type="text"
+                                    placeholder='e.g. Delhi'
+                                    value={textValue}
+                                    onChange={e => setTextValue(e.target.value)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === "Enter") {
+                                            searchButton();
+                                        }
+                                    }} />
                                 <button id='search-btn' onClick={searchButton}><span role='img' aria-label='search-icon'>🔍</span></button>
                             </div> :
                             <button id="location-btn" onClick={changeLocationButton}>Change Location</button>
