@@ -42,14 +42,6 @@ function WeatherCard() {
         TIME: "01:12"
     });
 
-
-
-    window.onload = () => {
-        // setTextValue('Goa');
-        // searchButton();
-    };
-
-
     const changeLocationButton = () => setOpenSearchBox(true);
     const searchButton = async () => {
         let locationRes = await axios.get('http://dataservice.accuweather.com/locations/v1/search', {
@@ -67,7 +59,6 @@ function WeatherCard() {
         if (!locationBody) {
             // text-area styling on error
             (document.getElementById('text-area') as HTMLElement).className += "error";
-
             // more additions
             setTextValue('');
             (document.getElementById('text-area') as HTMLElement).ariaPlaceholder = "Location not found!";
@@ -123,9 +114,6 @@ function WeatherCard() {
             Day3: {},
             Day4: {},
         });
-
-        alert(pageInfo.Time);
-
         setOpenSearchBox(false);
         setTextValue('');
     }
